@@ -25,4 +25,22 @@ public class FileReaderUtil {
 
         return list;
     }
+
+    public static List<String> readStringListFile(String path) {
+        List<String> list = new ArrayList<>();
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(path));
+            String line = "";
+
+            while ((line = br.readLine()) != null) {
+                list.add(line);
+            }
+
+        } catch (IOException ignored) {
+
+        }
+
+        return list;
+    }
 }
