@@ -43,4 +43,22 @@ public class FileReaderUtil {
 
         return list;
     }
+
+    public static List<Integer> readBinaryListFile(String path) {
+        List<Integer> list = new ArrayList<>();
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(path));
+            String line = "";
+
+            while ((line = br.readLine()) != null) {
+                list.add(Integer.parseInt(line, 2));
+            }
+
+        } catch (IOException ignored) {
+
+        }
+
+        return list;
+    }
 }
