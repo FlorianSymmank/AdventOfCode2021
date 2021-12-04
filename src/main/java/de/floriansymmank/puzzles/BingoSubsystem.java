@@ -22,8 +22,11 @@ public class BingoSubsystem {
             for (BingoBoard bingoBoard : bingoBoards) {
                 bingoBoard.markNumber(drawnNumber);
 
-                if (bingoBoard.isBingo())
-                    return scoreBoard(bingoBoard, drawnNumber);
+                if (bingoBoard.isBingo()) {
+                    int score = scoreBoard(bingoBoard, drawnNumber);
+                    reset();
+                    return score;
+                }
             }
         }
 

@@ -44,17 +44,10 @@ public class BingoBoard {
     }
 
     public boolean isBingo() {
-        // check rowbingo
-        for (int row = 0; row < numberOfRows; row++) {
-            boolean rowBingo = true;
-            for (int col = 0; col < numberOfColumns; col++)
-                rowBingo &= board[row][col].isMarked();
+        return hasRowBingo() || hasColumnBingo();
+    }
 
-            if (rowBingo)
-                return true;
-        }
-
-        // check columnbingo
+    private boolean hasColumnBingo() {
         for (int col = 0; col < numberOfColumns; col++) {
             boolean columnBingo = true;
             for (int row = 0; row < numberOfRows; row++)
@@ -63,7 +56,18 @@ public class BingoBoard {
             if (columnBingo)
                 return true;
         }
+        return false;
+    }
 
+    private boolean hasRowBingo() {
+        for (int row = 0; row < numberOfRows; row++) {
+            boolean rowBingo = true;
+            for (int col = 0; col < numberOfColumns; col++)
+                rowBingo &= board[row][col].isMarked();
+
+            if (rowBingo)
+                return true;
+        }
         return false;
     }
 
