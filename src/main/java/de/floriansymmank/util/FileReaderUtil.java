@@ -1,7 +1,9 @@
 package de.floriansymmank.util;
 
 import de.floriansymmank.puzzles.BingoBoard;
+import de.floriansymmank.puzzles.Line;
 
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -103,6 +105,30 @@ public class FileReaderUtil {
                     list.add(Integer.parseInt(s));
             }
         } catch (IOException ignored) {
+        }
+
+        return list;
+    }
+
+    public static List<Line> readLinesFromFile(String path) {
+        List<Line> list = new ArrayList<>();
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(path));
+            String line = "";
+
+            while ((line = br.readLine()) != null) {
+                line = line.replace(" ", "");
+                String[] points = line.split("->");
+                String[] p1 = points[0].split(",");
+                String[] p2 = points[1].split(",");
+                Point point1 = new Point(Integer.parseInt(p1[0]), Integer.parseInt(p1[1]));
+                Point point2 = new Point(Integer.parseInt(p2[0]), Integer.parseInt(p2[1]));
+                list.add(new Line(point1, point2));
+            }
+
+        } catch (IOException ignored) {
+
         }
 
         return list;
