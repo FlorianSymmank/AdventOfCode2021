@@ -1,3 +1,5 @@
+package de.floriansymmank.puzzles;
+
 import de.floriansymmank.puzzles.BingoBoard;
 import de.floriansymmank.puzzles.BingoSubsystem;
 import de.floriansymmank.util.FileReaderUtil;

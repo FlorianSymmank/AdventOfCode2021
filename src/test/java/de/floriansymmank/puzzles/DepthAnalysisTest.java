@@ -1,3 +1,5 @@
+package de.floriansymmank.puzzles;
+
 import de.floriansymmank.puzzles.DepthAnalysis;
 import org.junit.jupiter.api.Test;
 
