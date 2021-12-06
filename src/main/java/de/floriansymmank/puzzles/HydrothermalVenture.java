@@ -37,9 +37,7 @@ public class HydrothermalVenture {
                 }
             }
         }
-
-        printGrid(grid);
-
+        // printGrid(grid);
         return numberOfAreasToAvoid;
     }
 
@@ -63,9 +61,7 @@ public class HydrothermalVenture {
                 }
             }
         }
-
-        //printGrid(grid);
-
+        // printGrid(grid);
         return numberOfAreasToAvoid;
     }
 
@@ -74,6 +70,7 @@ public class HydrothermalVenture {
         return "Day 5 (HydrothermalVenture): getNumberOfAreasToAvoid() = " + getNumberOfAreasToAvoid() + " //// getNumberOfAreasToAvoidDiagonal = " + getNumberOfAreasToAvoidDiagonal();
     }
 
+    // for debugging
     private void printGrid(int[][] grid) {
         for (int y = 0; y < grid.length; y++) {
             for (int x = 0; x < grid[y].length; x++) {
