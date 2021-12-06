@@ -13,28 +13,17 @@ public class Lanternfish {
 
     public long growPopulation(int days) {
         // numbers get big very fast, so we need to use long, BigInteger would work too
-        // fish of same age can be considered to be the same fish, just store the amount of fish of each age
+        // fish with same time to spawn new fish can be considered to be the same fish, just store the amount of fish
 
         long[] fishOfAge = new long[9];
 
         for (int fishage : fishages)
             fishOfAge[fishage]++;
 
-        // re-categorize fish each day, remember amount of fish in category 0, 1 -> 0 2 -> 1, 3 -> 2 ...
-        // then add remembered fish in category 8, and 6 plus the amount already in category 6
+        // no need to shift values in array, just shift the index of time to spawn (tts) fish, add amount of tts 0 fish to 7
 
-        for (int day = 0; day < days; day++) {
-            long newFish = 0;
-            for (int i = 0; i < fishOfAge.length; i++) {
-                if (i == 0)
-                    newFish = fishOfAge[i];
-                else
-                    fishOfAge[i - 1] = fishOfAge[i];
-
-            }
-            fishOfAge[8] = newFish;
-            fishOfAge[6] += newFish;
-        }
+        for (int day = 0, spawnTimeIndex = 0; day < days; day++, spawnTimeIndex++)
+            fishOfAge[(spawnTimeIndex + 7) % 9] += fishOfAge[spawnTimeIndex % 9];
 
         return Arrays.stream(fishOfAge).sum();
     }
