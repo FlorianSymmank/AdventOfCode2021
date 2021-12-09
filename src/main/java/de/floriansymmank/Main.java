@@ -19,5 +19,8 @@ public class Main {
         System.out.println(new HydrothermalVenture(FileReaderUtil.readLinesFromFile("src/main/resources/puzzle5Input.txt")));
         System.out.println(new Lanternfish(FileReaderUtil.readFirstLineAsIntegerList("src/main/resources/puzzle6Input.txt")));
         System.out.println(new TheTreacheryOfWhales(FileReaderUtil.readFirstLineAsIntegerList("src/main/resources/puzzle7Input.txt")));
+        System.out.println(new SevenSegmentDisplay(FileReaderUtil.readStringListFile("src/main/resources/puzzle8Input.txt")));
+        System.out.println(new SmokeBasin(FileReaderUtil.readMatrixFromFile("src/main/resources/puzzle9Input.txt")));
+
     }
 }

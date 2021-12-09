@@ -12,6 +12,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileReaderUtil {
+
+
+    public static String readFirstLineFromFile(String path) {
+        String line = "";
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(path));
+            line = br.readLine();
+        } catch (IOException ignored) {
+        }
+
+        return line;
+    }
+
     public static List<Integer> readIntergerListFile(String path) {
         List<Integer> list = new ArrayList<>();
 
@@ -132,5 +146,32 @@ public class FileReaderUtil {
         }
 
         return list;
+    }
+
+    public static int[][] readMatrixFromFile(String path) {
+        int[][] matrix = new int[0][0];
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(path));
+            String line = "";
+
+            while ((line = br.readLine()) != null) {
+                String[] split = line.split("");
+                int[][] newMatrix = new int[matrix.length + 1][split.length];
+
+                for (int i = 0; i < matrix.length; i++)
+                    System.arraycopy(matrix[i], 0, newMatrix[i], 0, matrix[i].length);
+
+                for (int i = 0; i < split.length; i++)
+                    newMatrix[matrix.length][i] = Integer.parseInt(split[i]);
+
+                matrix = newMatrix;
+            }
+
+        } catch (IOException ignored) {
+
+        }
+
+        return matrix;
     }
 }
