@@ -21,6 +21,8 @@ public class Main {
         System.out.println(new TheTreacheryOfWhales(FileReaderUtil.readFirstLineAsIntegerList("src/main/resources/puzzle7Input.txt")));
         System.out.println(new SevenSegmentDisplay(FileReaderUtil.readStringListFile("src/main/resources/puzzle8Input.txt")));
         System.out.println(new SmokeBasin(FileReaderUtil.readMatrixFromFile("src/main/resources/puzzle9Input.txt")));
+        System.out.println(new SyntaxScoring(FileReaderUtil.readStringListFile("src/main/resources/puzzle10Input.txt")));
+
 
     }
 }
