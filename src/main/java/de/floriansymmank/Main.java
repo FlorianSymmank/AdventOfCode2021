@@ -15,7 +15,6 @@ public class Main {
                 FileReaderUtil.readFirstLineAsIntegerList("src/main/resources/puzzle4Input.txt"),
                 FileReaderUtil.readBingoBoardsFromFile("src/main/resources/puzzle4Input.txt", 5, 5)));
 
-
         System.out.println(new HydrothermalVenture(FileReaderUtil.readLinesFromFile("src/main/resources/puzzle5Input.txt")));
         System.out.println(new Lanternfish(FileReaderUtil.readFirstLineAsIntegerList("src/main/resources/puzzle6Input.txt")));
         System.out.println(new TheTreacheryOfWhales(FileReaderUtil.readFirstLineAsIntegerList("src/main/resources/puzzle7Input.txt")));
@@ -23,7 +22,6 @@ public class Main {
         System.out.println(new SmokeBasin(FileReaderUtil.readMatrixFromFile("src/main/resources/puzzle9Input.txt")));
         System.out.println(new SyntaxScoring(FileReaderUtil.readStringListFile("src/main/resources/puzzle10Input.txt")));
         System.out.println(new DumboOctopus(FileReaderUtil.readMatrixFromFile("src/main/resources/puzzle11Input.txt")));
-
-
+        System.out.println(new PassagePathing(FileReaderUtil.readStringListFile("src/main/resources/puzzle12Input.txt")));
     }
 }
