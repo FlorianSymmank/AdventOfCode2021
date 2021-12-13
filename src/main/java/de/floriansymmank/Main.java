@@ -22,6 +22,7 @@ public class Main {
         System.out.println(new SevenSegmentDisplay(FileReaderUtil.readStringListFile("src/main/resources/puzzle8Input.txt")));
         System.out.println(new SmokeBasin(FileReaderUtil.readMatrixFromFile("src/main/resources/puzzle9Input.txt")));
         System.out.println(new SyntaxScoring(FileReaderUtil.readStringListFile("src/main/resources/puzzle10Input.txt")));
+        System.out.println(new DumboOctopus(FileReaderUtil.readMatrixFromFile("src/main/resources/puzzle11Input.txt")));
 
 
     }
