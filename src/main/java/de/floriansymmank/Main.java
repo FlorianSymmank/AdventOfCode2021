@@ -3,6 +3,8 @@ package de.floriansymmank;
 import de.floriansymmank.puzzles.*;
 import de.floriansymmank.util.FileReaderUtil;
 
+import javax.print.attribute.standard.OrientationRequested;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println(new DepthAnalysis(FileReaderUtil.readIntergerListFile("src/main/resources/puzzle1Input.txt")));
@@ -23,5 +25,7 @@ public class Main {
         System.out.println(new SyntaxScoring(FileReaderUtil.readStringListFile("src/main/resources/puzzle10Input.txt")));
         System.out.println(new DumboOctopus(FileReaderUtil.readMatrixFromFile("src/main/resources/puzzle11Input.txt")));
         System.out.println(new PassagePathing(FileReaderUtil.readStringListFile("src/main/resources/puzzle12Input.txt")));
+        System.out.println(new TransparentOrigami(FileReaderUtil.readStringListFile("src/main/resources/puzzle13Input.txt")));
+
     }
 }
