@@ -26,6 +26,7 @@ public class Main {
         System.out.println(new DumboOctopus(FileReaderUtil.readMatrixFromFile("src/main/resources/puzzle11Input.txt")));
         System.out.println(new PassagePathing(FileReaderUtil.readStringListFile("src/main/resources/puzzle12Input.txt")));
         System.out.println(new TransparentOrigami(FileReaderUtil.readStringListFile("src/main/resources/puzzle13Input.txt")));
+        System.out.println(new ExtendedPolymerization(FileReaderUtil.readStringListFile("src/main/resources/puzzle14Input.txt")));
 
     }
 }
