@@ -156,6 +156,6 @@ public class DumboOctopus {
 
     @Override
     public String toString() {
-        return "Day 11: (Dumbo Octopus) getFlashCount(100) = " + getFlashCount(100) + " //// getAllFlashStep() = " + getAllFlashStep();
+        return "Day 11 (Dumbo Octopus): getFlashCount(100) = " + getFlashCount(100) + " //// getAllFlashStep() = " + getAllFlashStep();
     }
 }

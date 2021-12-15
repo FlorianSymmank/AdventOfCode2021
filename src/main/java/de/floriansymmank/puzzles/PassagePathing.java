@@ -69,7 +69,7 @@ public class PassagePathing {
             paths = newPaths;
         }
 
-        printAllPaths(uniquePaths);
+        //printAllPaths(uniquePaths);
         return uniquePaths.size();
     }
 
@@ -113,7 +113,7 @@ public class PassagePathing {
 
     @Override
     public String toString() {
-        return "Day 12 (PassagePathing): getAllPathCount() = " + getAllPathCount() + "//// getAllPathCount2() = " + getAllPathCount2();
+        return "Day 12 (PassagePathing): getAllPathCount() = " + getAllPathCount() + " //// getAllPathCount2() = " + getAllPathCount2();
     }
 
 
